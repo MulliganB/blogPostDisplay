@@ -7,10 +7,10 @@ export const environment = {
   production: false,
   firebase: {
     apiKey: "API Key",
-    authDomain: "postmanager-8af69.firebaseapp.com",
-    databaseURL: "https://postmanager-8af69.firebaseio.com",
-    projectId: "postmanager-8af69",
+    authDomain: "example.firebaseapp.com",
+    databaseURL: "https://example.firebaseio.com",
+    projectId: "example",
     storageBucket: "",
-    messagingSenderId: "931769477352"
+    messagingSenderId: "00000000000"
   }
 };
