@@ -1,0 +1,21 @@
+<i class="fa fa-refresh" (click)="refresh()"></i>
+<div *ngIf="items?.length > 0;else noItems">
+  <ul *ngFor="let item of items; let i = index" class="collection">
+    <li class="collection-item white">
+      <div class="col s2">
+        <img src="../../../assets/header1.PNG" alt="" width="100px" height="100px">
+      </div>
+      <div class="col s10">
+        <strong class="bold flow-text"><a routerLink="/Post/{{item.id}}" (click)="updateViewState($event, item)">{{item.Title}}: </a></strong>
+        <span class="italics flow-text">{{item.Subtitle}}</span><br>
+        {{item.datePublish}}<br>
+        <span>{{item.Content | slice:0:111}}...</span>
+       </div>
+     </li>
+  </ul>
+</div>
+
+<ng-template #noItems>
+  <hr>
+  <h5>There are no Items to list</h5>
+</ng-template>

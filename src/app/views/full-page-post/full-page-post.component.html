@@ -1,0 +1,16 @@
+<div *ngIf="item.title !== '';else noItems" class="row">
+  <div class="col s8">
+    <h1>{{item.Title}}</h1>
+    <h4>{{item.Subtitle}}</h4>
+    <p>{{item.datePublish}}</p>
+    <p class="flow-text">{{item.Content}}</p>
+  </div>
+  <div class="col s4">
+    <app-sidebar-main></app-sidebar-main>
+  </div>
+</div>
+
+<ng-template #noItems>
+  <hr>
+  <h5>There are no Items to list</h5>
+</ng-template>

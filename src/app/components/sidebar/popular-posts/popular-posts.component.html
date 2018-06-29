@@ -1,0 +1,19 @@
+<h5 class="grey-text"><strong>Popular posts</strong></h5>
+<div *ngIf="items?.length > 0;else noItems" class="row left-pad">
+    <ul *ngFor="let item of items; let i = index" class="collection">
+      <div *ngIf="i <= 1">
+        <div class="col s6 square-link">
+          <a href="#" class="grey-text">{{item.Title}}</a>
+        </div>
+      </div>
+    </ul>
+</div>
+<div *ngIf="items" class="row left-pad">
+  <div class="col s6 square-link">
+    <a href="#" class="grey-text">{{item.Title}}</a>
+  </div>
+</div>
+
+<ng-template #noItems>
+  <h5>No posts have been voted on</h5>
+</ng-template>

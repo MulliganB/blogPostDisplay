@@ -1,0 +1,15 @@
+.small{
+  font-weight: 200;
+}
+.height{
+  height: 185px;
+}
+.italics {
+  font-style: italic;
+}
+.bold {
+  font-weight: bold;
+}
+.closeGap {
+  margin-top: -2%;
+}

@@ -1,0 +1,81 @@
+.padLeft {
+    padding-left: 200px !important;
+}
+.drop {
+    padding-top: 10px;
+}
+.navdrop {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+/* Header Call */
+.headerCall {
+    margin-top: 30px !important;
+}
+.topBar {
+    background-color: #7ddfdd;
+    height: 5px;
+    width: 40px;
+
+    margin-bottom: 50px;
+}
+header h1 {
+   font-size: 28px;
+   color: #323232;
+
+   margin-bottom: 40px;
+}
+header p {
+    font-size: 14px;
+}
+.dropText {
+    margin-top: 80px;
+}
+.separate{
+    margin-top: 40px !important;
+}
+.profileImg {
+    margin-top: 20px;
+}
+.profile a {
+    margin-top: 15px;
+
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Second Nav */
+.secondNav {
+    border-top: 1px solid #e7e7e7;
+    height: 80px;
+}
+.secondNav nav ul li {
+    height: 40px;
+
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    width: 275px;
+
+    font-weight: 600;
+    color: #545454;
+}
+.secondNav nav ul li:last-child {
+    border-right: none;
+    width: 350px;
+}
+.inner {
+    width: 80%;
+    height: 40px;
+    margin: 12px auto;
+    border-right: 2px solid #e7e7e7;
+}
+input {
+    border: 1px solid #e7e7e7 !important;
+    border-radius: 5px !important;
+    background-color: #f6f9fe !important;
+    color: #545454 !important;
+    padding: 5px 10px 5px 10px !important;
+}

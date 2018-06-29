@@ -1,0 +1,41 @@
+<i class="fa fa-refresh" (click)="refresh()"></i>
+<div *ngIf="items?.length > 0;else noItems" id="collection">
+  <ul *ngFor="let item of items; let i = index" class="collection">
+    <li class="collection-item blue lighten-4">
+      <strong class="bold flow-text">{{item.Title}}: </strong>
+      <span class="italics flow-text">{{item.Subtitle}}</span><br>
+      {{item.datePublish}}<br>
+       <span>{{item.Content | slice:0:111}}...</span>
+       <a class="secondary-content">
+         <i class="fa fa-pencil black-text" (click)="editItem($event, item)"></i>
+         <i *ngIf="editState && itemToEdit.id == item.id" class="fa fa-compress black-text" (click)="clearState()"></i>
+         <i routerLink="/Post/{{item.id}}" class="fa fa-book black-text" (click)="updateViewState($event, item)"></i>
+       </a>
+
+       <div *ngIf="editState && itemToEdit.id == item.id">
+        <form (ngSubmit)="updateItem(item)">
+          <div class="row">
+            <div class="input-field col s6">
+              <input type="text" placeholder="Add Title" [(ngModel)]="item.title" name="title">
+            </div>
+            <div class="input-field col s6">
+              <input type="text" placeholder="Add Subtitle" [(ngModel)]="item.subtitle" name="subtitle">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 closeGap">
+              <input type="text" placeholder="Add Content" [(ngModel)]="item.Content" name="Content">
+            </div>
+            <input type="submit" class="btn blue accent-1" value="Update Item">
+            <button (click)="deleteItem($event, item)" class="btn blue darken-4" type="button">Delete Item</button>
+          </div>
+        </form>
+       </div>
+     </li>
+  </ul>
+</div>
+
+<ng-template #noItems>
+  <hr>
+  <h5>There are no Items to list</h5>
+</ng-template>
